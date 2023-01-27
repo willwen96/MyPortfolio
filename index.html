@@ -3,44 +3,98 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Simple demo Web page for CSE 134B" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Junhui Wen" />
+    <meta name="web_url" content="https://prismatic-moonbeam-40fd1d.netlify.app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSE 134B Homework 1 Website</title>
+    <title>Junhui Wen's Portfolio</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
 <header>
-    <h1>CSE 134B Junhui Wen's Website</h1>
-
-    <section id="user-info-component">
-        <div id="user-info" style="display: none;">
-            <output id="name-info">&nbsp;</output>
-            <br />
-            <output id="major-info">&nbsp;</output>
-            <hr />
-            <br />
-            <!-- Inline Javascript Handlers used here for demonstration only -->
-            <section class="intro-text">
-                <label>My name is <input id="name-input" type="text" autocomplete="name" autofocus maxlength="30" placeholder="Your Name"></label>
-                <br />
-                <label>My major is <input id="major-input" type="text" maxlength="30" placeholder="Your Major"></label>
-            </section>
-        </div>
-    </section>
-
+    <div>
+        <b>&lt; Junhui Wen /&gt;</b>
+        <nav>
+            <a class="nav" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="skills.html">Skills</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="portfolio.html">Portfolio</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="blog.html">Blog</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="contact.html">Contact Me</a>&nbsp;&nbsp;&nbsp;
+        </nav>
+    </div>
 </header>
 
 <main>
+    <br>
+    <br>
+    <br>
+    <div>
+        <aside>
+            <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi! I am Junhui Wen </h1>
+            <pre>
+        I am a college student from UCSD, Class of 2023. I am double major in
+        Computer Science and Applied Mathematics. In my life, I am an artistic
+        youth passionate about music and sports, and I also like to read book
+        and watch TV and movies. My music style is quite broad: having played
+        the violin for more than 10 years, I love to play some classic music
+        pieces such as New World Symphony, Canon in D, The Rain, etc. Besides,
+        I also like to play the guitar, piano, and drums.
+        </pre>
+
+        </aside>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img id="img1" src="public/Rubik's.jpg" alt="My Photo" width="40%" />
+
+        <div>
+            <section>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
+                    <img src="public/linkedin_icon.png" alt="Linkedin" />
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/willwen96">
+                    <img src="public/github_icon.png" alt="Github" />
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/will.wen.313">
+                    <img src="public/facebook_icon.png" alt="Facebook" />
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
+                    <img src="public/Q_mark.png" alt="What is this?" />
+                </a>
+            </section>
+            <br>
+            <section>
+                <a href="public/Junhui_WEN_Resume.pdf" download=""><button type="button">Resume</button></a>
+                <a href="contact.html"><button type="button">Contact Me</button></a>
+            </section>
+        </div>
+
+    </div>
+
+    <audio autoplay="autoplay" id="audio" loop="loop" preload="metadata">
+        <source src="public/again.mp3" type="audio/MP3">
+    </audio>
+
 </main>
 
 <footer>
     <hr/>
-    <p>💯This page was made with &hearts; by Junhui Wen 💯</p>
+    <em>@2023 by Junhui Wen</em>
 </footer>
 </body>
-
+<script>
+    let music = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            music.play();
+        }, 2000);
+    }, false);
+</script>
 </html>

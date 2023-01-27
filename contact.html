@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Simple demo Web page for CSE 134B" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Junhui Wen" />
+    <meta name="web_url" content="https://prismatic-moonbeam-40fd1d.netlify.app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junhui Wen's Portfolio</title>
+    <link href="public/favicon.ico" rel="icon" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <div>
+        <b>&lt; Junhui Wen /&gt;</b>
+        <nav>
+            <a class="nav" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="skills.html">Skills</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="portfolio.html">Portfolio</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="blog.html">Blog</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="contact.html">Contact Me</a>&nbsp;&nbsp;&nbsp;
+        </nav>
+    </div>
+</header>
+
+<main>
+    <br> <br> <br>
+    <form action="/form-handler" method="post" id="my_form"></form>
+    <table>
+        <tr>
+            <td>
+                <label for="name" form="my_form">Name: </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="name" id="name" form="my_form" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email" form="my_form">Enter your email: </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" name="email" id="email" form="my_form" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="msg" form="my_form">Message: </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="message" id="message" cols="50" rows="20" form="my_form" required></textarea>
+            </td>
+        </tr>
+    </table>
+    <button type="submit" form="my_form"> SEND </button>
+</main>
+</body>
+</html>

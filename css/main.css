@@ -1,5 +1,14 @@
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+/*header {*/
+/*  position: fixed;*/
+/*  height: 50px;*/
+/*  width: 100%;*/
+/*  z-index: 100;*/
+/*}*/
+
+/*body {*/
+/*  position: relative;*/
+/*}*/
+nav {
+    float: right;
 }
+
