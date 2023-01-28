@@ -11,8 +11,10 @@
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
     <style>
-        a {
-            text-decoration: none;
+        #img1 {
+            position: relative;
+            display: inline-block;
+            margin-left: 7em;
         }
     </style>
 </head>
@@ -20,12 +22,11 @@
 <body>
 <header>
     <div>
-        <b>&lt; Junhui Wen /&gt;</b>
+        <code>&lt; Junhui Wen /&gt;</code>
         <nav>
             <a class="nav" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
             <a class="nav" href="skills.html">Skills</a>&nbsp;&nbsp;&nbsp;
             <a class="nav" href="portfolio.html">Portfolio</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="blog.html">Blog</a>&nbsp;&nbsp;&nbsp;
             <a class="nav" href="contact.html">Contact Me</a>&nbsp;&nbsp;&nbsp;
         </nav>
     </div>
@@ -35,8 +36,9 @@
     <br>
     <br>
     <br>
-    <div>
+    <div class="flex_row">
         <aside>
+            <br><br><br>
             <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi! I am Junhui Wen </h1>
             <pre>
         I am a college student from UCSD, Class of 2023. I am double major in
@@ -46,14 +48,8 @@
         the violin for more than 10 years, I love to play some classic music
         pieces such as New World Symphony, Canon in D, The Rain, etc. Besides,
         I also like to play the guitar, piano, and drums.
-        </pre>
-
-        </aside>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img id="img1" src="public/Rubik's.jpg" alt="My Photo" width="40%" />
-
-        <div>
-            <section>
+            </pre>
+            <div>
                 <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
@@ -65,36 +61,41 @@
                 <a href="https://www.facebook.com/will.wen.313">
                     <img src="public/facebook_icon.png" alt="Facebook" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
+                <a href="lab.html">
                     <img src="public/Q_mark.png" alt="What is this?" />
                 </a>
-            </section>
-            <br>
-            <section>
-                <a href="public/Junhui_WEN_Resume.pdf" download=""><button type="button">Resume</button></a>
-                <a href="contact.html"><button type="button">Contact Me</button></a>
-            </section>
-        </div>
+            </div>
+            <div class="flex_row" style="margin-top: 2em;">
+                <form action="public/Junhui_WEN_Resume.pdf" method="get" style="margin: 0 2em 0 3.5em">
+                    <button>Resume</button>
+                </form>
+                <form action="contact.html" method="get">
+                    <button>Contact Me</button>
+                </form>
+            </div>
 
+        </aside>
+        <img id="img1" src="public/Rubik's.jpg" alt="My Photo" width="500" height="375"/>
     </div>
-
-    <audio autoplay="autoplay" id="audio" loop="loop" preload="metadata">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <audio autoplay="autoplay" id="audio" preload="metadata" controls>
         <source src="public/again.mp3" type="audio/MP3">
     </audio>
-
 </main>
 
 <footer>
     <hr/>
-    <em>@2023 by Junhui Wen</em>
+    <p>@2023 by Junhui Wen</p>
+    <script>
+        let music = document.getElementById('audio')
+        document.body.addEventListener('mousemove', function() {
+            setTimeout(() => {
+                music.play();
+            }, 2000);
+        }, false);
+    </script>
 </footer>
 </body>
-<script>
-    let music = document.getElementById('audio')
-    document.body.addEventListener('mousemove', function() {
-        setTimeout(() => {
-            music.play();
-        }, 2000);
-    }, false);
-</script>
+
 </html>
