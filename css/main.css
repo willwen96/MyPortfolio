@@ -11,22 +11,22 @@
 nav {
     float: right;
 }
-header {
-    padding-bottom: 10px;
-    border-bottom: 1px solid;
-}
-main {
-    margin: 0 5em;
-}
-section {
-    margin: 2em 0;
-}
-.flex_row {
-    display: flex;
-    flex-direction: row;
-}
-a {
-    text-decoration: none;
-    color: #1E4460;
- }
+/*header {*/
+/*    padding-bottom: 10px;*/
+/*    border-bottom: 1px solid;*/
+/*}*/
+/*main {*/
+/*    margin: 0 5em;*/
+/*}*/
+/*section {*/
+/*    margin: 2em 0;*/
+/*}*/
+/*.flex_row {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+/*a {*/
+/*    text-decoration: none;*/
+/*    color: #1E4460;*/
+/* }*/
 
