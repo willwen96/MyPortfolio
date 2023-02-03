@@ -14,59 +14,80 @@
         #img1 {
             position: relative;
             display: inline-block;
-            margin-left: 7em;
+            margin-left: 10%;
+        }
+        #title {
+            padding-left: 7%;
+        }
+        #icons {
+            padding-left: 7%;
+            margin-top: 5%;
+        }
+        @font-face {
+            font-family: work-sans;
+            src: url('/public/WorkSans/WorkSans-Light.woff');
+        }
+        button {
+            background: none;
+            border: 2px solid;
+            font: inherit;
+            line-height: 1;
+            margin: 0.5em;
+            padding: 1em 2em;
+            transition: 0.5s;
+            border-radius: 15px;
+        }
+        button:hover, button:focus {
+            --hover: #{adjust-hue($color, 45deg)};
+            box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+            transform: translateY(-0.25em);
+            color: #54b3d6;
         }
     </style>
 </head>
-
 <body>
 <header>
     <div>
         <code>&lt; Junhui Wen /&gt;</code>
         <nav>
-            <a class="nav" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="skills.html">Skills</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="portfolio.html">Portfolio</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="contact.html">Contact Me</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="index.html" style="color: #1e88e5">Home</a>
+            <a class="nav" href="skills.html">Skills</a>
+            <a class="nav" href="portfolio.html">Portfolio</a>
+            <a class="nav" href="contact.html">Contact Me</a>
         </nav>
     </div>
 </header>
 
 <main>
-    <br>
-    <br>
-    <br>
-    <div class="flex_row">
+    <div class="flex_row wrapper" style="padding-top: 17vh">
         <aside>
-            <br><br><br>
-            <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi! I am Junhui Wen </h1>
-            <pre>
-        I am a college student from UCSD, Class of 2023. I am double major in
-        Computer Science and Applied Mathematics. In my life, I am an artistic
-        youth passionate about music and sports, and I also like to read book
-        and watch TV and movies. My music style is quite broad: having played
-        the violin for more than 10 years, I love to play some classic music
-        pieces such as New World Symphony, Canon in D, The Rain, etc. Besides,
-        I also like to play the guitar, piano, and drums.
-            </pre>
-            <div>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h1 id="title">Hi! I am Junhui Wen </h1>
+            <pre style="font-size: 17px; line-height: 125%; font-family: work-sans; color: #636363; font-weight: 500">
+        I am a senior at UC San Diego double majoring in Computer Science
+        and Applied Mathematics. I have a strong interest in Software Design
+        as well as Human Computer Interaction. Currently, I am a Tech Lead
+        at Chinese Computer Community at UC San Diego.
+
+        Having four-year experience in Computer Science, I am eager to better
+        the society as a future software engineer or full stack developer
+        with my acute sense in problem-solving, strong self-management and
+        efficiency.</pre>
+            <div id="icons">
                 <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
-                    <img src="public/linkedin_icon.png" alt="Linkedin" />
+                    <img src="public/linkedin.svg" alt="Linkedin" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://github.com/willwen96">
-                    <img src="public/github_icon.png" alt="Github" />
+                    <img src="public/github.svg" alt="Github" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://www.facebook.com/will.wen.313">
-                    <img src="public/facebook_icon.png" alt="Facebook" />
+                    <img src="public/facebook.svg" alt="Facebook" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="lab.html">
-                    <img src="public/Q_mark.png" alt="What is this?" />
+                    <img src="public/Q_mark.svg" alt="What is this?" />
                 </a>
             </div>
             <div class="flex_row" style="margin-top: 2em;">
-                <form action="public/Junhui_WEN_Resume.pdf" method="get" style="margin: 0 2em 0 3.5em">
+                <form action="public/Junhui_WEN_Resume.pdf" method="get" style="margin: 0 2em 0 2em">
                     <button>Resume</button>
                 </form>
                 <form action="contact.html" method="get">
@@ -75,17 +96,15 @@
             </div>
 
         </aside>
-        <img id="img1" src="public/Rubik's.jpg" alt="My Photo" width="500" height="375"/>
+        <img id="img1" src="public/violin.png" alt="My Photo" width="500" height="325"/>
     </div>
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <audio autoplay="autoplay" id="audio" preload="metadata" controls>
+    <br><br>
+    <audio autoplay="autoplay" id="audio" preload="metadata">
         <source src="public/again.mp3" type="audio/MP3">
     </audio>
 </main>
 
 <footer>
-    <hr/>
     <p>@2023 by Junhui Wen</p>
     <script>
         let music = document.getElementById('audio')

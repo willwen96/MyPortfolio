@@ -10,22 +10,21 @@
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
 </head>
+
 <body>
 <header>
-    <div>
+    <div style="z-index: 100">
         <code>&lt; Junhui Wen /&gt;</code>
         <nav>
-            <a class="nav" href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="skills.html">Skills</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="portfolio.html">Portfolio</a>&nbsp;&nbsp;&nbsp;
-            <a class="nav" href="contact.html">Contact Me</a>&nbsp;&nbsp;&nbsp;
+            <a class="nav" href="index.html">Home</a>
+            <a class="nav" href="skills.html" style="color: #1e88e5">Skills</a>
+            <a class="nav" href="portfolio.html">Portfolio</a>
+            <a class="nav" href="contact.html">Contact Me</a>
         </nav>
     </div>
 </header>
-
 <main>
-    <br> <br>
-    <div>
+    <div class="wrapper">
         <h1>My Skills</h1>
         <section>
             <h2>Front-End</h2>
@@ -37,71 +36,66 @@
                 <li>CSS</li>
             </ul>
         </section>
+        <hr>
+        <section>
+            <h2>Back-End</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C/C++</li>
+                <li>Spring Boot</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h2>Technologies</h2>
+            <ul>
+                <li>Android Studio</li>
+                <li>AWS</li>
+                <li>Linux</li>
+                <li>Zenhub</li>
+                <li>Github</li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h2>Rubik's Cubes</h2>
+            <table>
+                <caption>My Records</caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>Event&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Single  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Average</th>
+                </tr>
+                <tr>
+                    <td>3x3x3 Cube &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>17.54 &nbsp;</td>
+                    <td>24.32</td>
+                </tr>
+                <tr>
+                    <td>2x2x2 Cube</td>
+                    <td>5.74</td>
+                    <td>8.18</td>
+                </tr>
+                <tr>
+                    <td>Pyraminx</td>
+                    <td>9.96</td>
+                    <td>12.05</td>
+                </tr>
+            </table>
+            <div>
+                <h3>My best record for 3*3*3: </h3>
+                <video src="public/cube.mp4" muted controls preload="metadata" width="400px"></video>
+            </div>
+        </section>
     </div>
-    <hr>
-    <section>
-        <h2>Back-End</h2>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C/C++</li>
-            <li>Spring Boot</li>
-            <li>SQL</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Technologies</h2>
-        <ul>
-            <li>Android Studio</li>
-            <li>AWS</li>
-            <li>Linux</li>
-            <li>Zenhub</li>
-            <li>Github</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Rubik's Cubes</h2>
-        <table>
-            <caption>My Records</caption>
-            <colgroup>
-                <col span="1">
-                <col span="2">
-            </colgroup>
-            <tr>
-                <th>Event&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <th>Single  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <th>Average</th>
-            </tr>
-            <tr>
-                <td>3x3x3 Cube &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td>17.54 &nbsp;</td>
-                <td>24.32</td>
-            </tr>
-            <tr>
-                <td>2x2x2 Cube</td>
-                <td>5.74</td>
-                <td>8.18</td>
-            </tr>
-            <tr>
-                <td>Pyraminx</td>
-                <td>9.96</td>
-                <td>12.05</td>
-            </tr>
-        </table>
-        <div>
-            <h3>My best record for 3*3*3: </h3>
-            <video src="public/cube.mp4" muted controls preload="metadata" width="400px"></video>
-        </div>
-    </section>
-
-
-
-
 </main>
 <footer>
-    <hr/>
     <p>@2023 by Junhui Wen</p>
 </footer>
 </body>
