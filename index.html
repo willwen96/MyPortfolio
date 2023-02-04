@@ -38,6 +38,7 @@
             border-radius: 15px;
         }
         button:hover, button:focus {
+            cursor: pointer;
             --hover: #{adjust-hue($color, 45deg)};
             box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
             transform: translateY(-0.25em);
@@ -50,7 +51,7 @@
     <div>
         <code>&lt; Junhui Wen /&gt;</code>
         <nav>
-            <a class="nav" href="index.html" style="color: #1e88e5">Home</a>
+            <a class="cur_nav" href="index.html">Home</a>
             <a class="nav" href="skills.html">Skills</a>
             <a class="nav" href="portfolio.html">Portfolio</a>
             <a class="nav" href="contact.html">Contact Me</a>
@@ -61,16 +62,17 @@
 <main>
     <div class="flex_row wrapper" style="padding-top: 17vh">
         <aside>
-            <h1 id="title">Hi! I am Junhui Wen </h1>
-            <pre style="font-size: 17px; line-height: 125%; font-family: work-sans; color: #636363; font-weight: 500">
+            <h1 id="title">Hi 👋🏻 I am Junhui (Will) Wen </h1>
+            <pre style="font-size: 17px; line-height: 125%; font-family: work-sans, Times, serif;
+                        color: #636363; font-weight: 500">
         I am a senior at UC San Diego double majoring in Computer Science
         and Applied Mathematics. I have a strong interest in Software Design
         as well as Human Computer Interaction. Currently, I am a Tech Lead
         at Chinese Computer Community at UC San Diego.
 
         Having four-year experience in Computer Science, I am eager to better
-        the society as a future software engineer or full stack developer
-        with my acute sense in problem-solving, strong self-management and
+        the society as a future software engineer or full stack developer with
+        my acute sense in problem-solving, strong self-management and
         efficiency.</pre>
             <div id="icons">
                 <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
@@ -96,7 +98,7 @@
             </div>
 
         </aside>
-        <img id="img1" src="public/violin.png" alt="My Photo" width="500" height="325"/>
+        <img id="img1" src="public/violin.png" alt="My Photo" width="500" height="324" style="margin-top: 4%"/>
     </div>
     <br><br>
     <audio autoplay="autoplay" id="audio" preload="metadata">

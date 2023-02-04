@@ -12,25 +12,16 @@
     <style>
         #contact_form {
             background: white;
-            box-shadow: 0px 20px 30px rgba(30, 136, 229, 0.13);
-            padding: 10px 0;
-            border-radius: 14px;
-            width: 150%;
+            box-shadow: 0 20px 30px rgba(123, 83, 195, 0.15);
+            padding: 2% 4% 2% 2%;
         }
         tr {
             display: flex;
-            margin: 10px 5px !important;
-        }
-        form {
-            display: none;
-            text-align: left;
-            padding: 40px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px gray;
+            margin: 2px 5px !important;
         }
         label {
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 500;
             display: block;
             margin-bottom: 10px;
         }
@@ -38,9 +29,11 @@
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            margin-bottom: 20px;
+            font-family: Times;
+            margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid gray;
+            background-color: rgba(0, 119, 190, 0.1);
         }
         input[type="submit"] {
             width: 100%;
@@ -52,21 +45,26 @@
             color: white;
         }
         button {
-            color: #1e88e5;
+            color: #0077BE;
             background: none;
             border: 1px solid;
             font: inherit;
             line-height: 1;
             margin: 0.5em;
             padding: 1em 2em;
-            transition: 0.5s;
+            transition: 0.1s;
             border-radius: 15px;
         }
         button:hover, button:focus {
             --hover: #{adjust-hue($color, 45deg)};
             box-shadow: inset 0 0 0 2em var(--hover);
             color: #fff;
-            background: #1e88e5;
+            background: #0077BE;
+        }
+        @media (min-width: 480px) and (max-width: 991px) {
+            .wrapper {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -78,24 +76,25 @@
             <a class="nav" href="index.html">Home</a>
             <a class="nav" href="skills.html">Skills</a>
             <a class="nav" href="portfolio.html">Portfolio</a>
-            <a class="nav" href="contact.html" style="color: #1e88e5">Contact Me</a>
+            <a class="cur_nav" href="contact.html">Contact Me</a>
         </nav>
     </div>
 </header>
 
 <main>
     <div class="flex_row wrapper" style="align-items: center;">
-        <picture style="position: relative; display: inline-block;">
-            <source media="(max-width:650px)" srcset="public/contact_me_small.jpeg">
-            <img src="public/contact_me_large.jpeg" alt="Contact" style="margin: 0 3vw" >
+        <picture class="row_inline">
+            <source media="(max-width:1279px)" srcset="public/contact_me_small.webp">
+            <img src="public/contact_me_large.webp" alt="Contact" style="margin-right: 4vw"
+                    sizes="(min-width: 991px) 480w, (min-width: 1279) 620w">
         </picture>
         <section id="contact_form">
             <form action="/form-handler" method="post" id="my_form"></form>
-            <h1 style="margin: 0 0 0 7px; color: #1e88e5">Let's Chat</h1>
+            <h1 style="margin: 20px 0 10px 7px; color: #0077BE">Let's Chat</h1>
             <table>
                 <tr>
                     <td>
-                        <label for="name" form="my_form">Name: </label>
+                        <label for="name" form="my_form">Name: <span style="color: darkred">*</span></label>
                     </td>
                 </tr>
                 <tr>
@@ -105,7 +104,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="email" form="my_form">Enter your email: </label>
+                        <label for="email" form="my_form">Email: <span style="color: darkred">*</span></label>
                     </td>
                 </tr>
                 <tr>
@@ -115,17 +114,18 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="msg" form="my_form">Message: </label>
+                        <label for="msg" form="my_form">Message: <span style="color: darkred">*</span></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <textarea name="message" id="message" cols="38" rows="10" form="my_form" required></textarea>
+                        <textarea name="message" id="message" cols="48" rows="10" form="my_form" required></textarea>
                     </td>
                 </tr>
             </table>
             <button type="submit" form="my_form"> SEND </button>
         </section>
+
     </div>
 
 
