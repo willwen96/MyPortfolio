@@ -44,7 +44,7 @@ header {
     width: 100vw;
     background-color: #F6FFFF;
     margin-top: 36px;
-    padding: 2em 5em 7em 5em;
+    padding: 2% 5% 7% 5%;
     position: relative;
 }
 main {
@@ -86,4 +86,30 @@ footer>p {
         margin-left: calc((100vw - 1440px)/2);
     }
 }
-
+@media (max-width: 991px) {
+    .flex_row {
+        flex-direction: column;
+    }
+    #home_button {
+        flex-direction: row;
+    }
+    code {
+        display: none;
+    }
+    nav {
+        float: left;
+    }
+    /*header {*/
+    /*    !*max-width: 480px;*!*/
+    /*    margin: auto;*/
+    /*    !*background-color: #555;*!*/
+    /*    !*height: 500px;*!*/
+    /*    color: white;*/
+    /*    border-radius: 10px;*/
+    /*}*/
+    /*nav {*/
+    /*    overflow: hidden;*/
+    /*    !*background-color: #333;*!*/
+    /*    position: relative;*/
+    /*}*/
+}

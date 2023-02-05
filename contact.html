@@ -29,7 +29,7 @@
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            font-family: Times;
+            font-family: Times,serif;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid gray;
@@ -61,11 +61,7 @@
             color: #fff;
             background: #0077BE;
         }
-        @media (min-width: 480px) and (max-width: 991px) {
-            .wrapper {
-                display: block;
-            }
-        }
+
     </style>
 </head>
 <body>
@@ -84,7 +80,7 @@
 <main>
     <div class="flex_row wrapper" style="align-items: center;">
         <picture class="row_inline">
-            <source media="(max-width:1279px)" srcset="public/contact_me_small.webp">
+            <source media="(max-width:1200px)" srcset="public/contact_me_small.webp">
             <img src="public/contact_me_large.webp" alt="Contact" style="margin-right: 4vw"
                     sizes="(min-width: 991px) 480w, (min-width: 1279) 620w">
         </picture>

@@ -10,18 +10,21 @@
     <title>Junhui Wen's Portfolio</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         #img1 {
             position: relative;
             display: inline-block;
-            margin-left: 10%;
+            margin-right: 8%;
+            margin-top: 4%;
         }
         #title {
             padding-left: 7%;
+            font-size: 1.8rem;
         }
         #icons {
             padding-left: 7%;
-            margin-top: 5%;
+            margin-top: 7%;
         }
         @font-face {
             font-family: work-sans;
@@ -44,6 +47,47 @@
             transform: translateY(-0.25em);
             color: #54b3d6;
         }
+        #intro {
+            font-size: 17px;
+            line-height: 125%;
+            font-family: work-sans, Times, serif;
+            color: #636363;
+            margin-left: 7%;
+            font-weight: 500;
+            width: 60ch;
+            display: flex;
+        }
+        #main_page {
+            padding-top: 17vh;
+        }
+        @media (min-width: 1440px) {
+            header {
+                width: 1440px;
+                margin-left: calc((100vw - 1440px)/2);
+            }
+            .wrapper {
+                width: 1440px;
+                margin-left: calc((100vw - 1440px)/2);
+            }
+            footer {
+                width: 1440px;
+                margin-left: calc((100vw - 1440px)/2);
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1279px) {
+            #main_page {
+                padding-top: 15vh;
+            }
+            #intro {
+                width: 50ch;
+            }
+            #img1 {
+                width: 450px;
+                height: 286px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -60,20 +104,20 @@
 </header>
 
 <main>
-    <div class="flex_row wrapper" style="padding-top: 17vh">
+    <div id="main_page" class="flex_row wrapper">
+        <img id="img1" src="public/my_photo.png" alt="My Photo" width="500" height="324"/>
         <aside>
             <h1 id="title">Hi 👋🏻 I am Junhui (Will) Wen </h1>
-            <pre style="font-size: 17px; line-height: 125%; font-family: work-sans, Times, serif;
-                        color: #636363; font-weight: 500">
+            <span id="intro">
         I am a senior at UC San Diego double majoring in Computer Science
         and Applied Mathematics. I have a strong interest in Software Design
         as well as Human Computer Interaction. Currently, I am a Tech Lead
         at Chinese Computer Community at UC San Diego.
-
+        <br><br>
         Having four-year experience in Computer Science, I am eager to better
         the society as a future software engineer or full stack developer with
         my acute sense in problem-solving, strong self-management and
-        efficiency.</pre>
+        efficiency.</span>
             <div id="icons">
                 <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
                     <img src="public/linkedin.svg" alt="Linkedin" />
@@ -88,7 +132,7 @@
                     <img src="public/Q_mark.svg" alt="What is this?" />
                 </a>
             </div>
-            <div class="flex_row" style="margin-top: 2em;">
+            <div id="home_button" class="flex_row" style="margin-top: 2em;">
                 <form action="public/Junhui_WEN_Resume.pdf" method="get" style="margin: 0 2em 0 2em">
                     <button>Resume</button>
                 </form>
@@ -98,10 +142,9 @@
             </div>
 
         </aside>
-        <img id="img1" src="public/violin.png" alt="My Photo" width="500" height="324" style="margin-top: 4%"/>
     </div>
     <br><br>
-    <audio autoplay="autoplay" id="audio" preload="metadata">
+    <audio autoplay="autoplay" id="audio" preload="metadata" muted>
         <source src="public/again.mp3" type="audio/MP3">
     </audio>
 </main>
