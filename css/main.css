@@ -65,12 +65,19 @@ section {
 }
 a {
     text-decoration: none;
+    color: black;
  }
 h1 {
     margin-bottom: 2em;
 }
 footer>p {
     margin-left: 5vw;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    text-align: center;
 }
 @media (min-width: 1440px) {
     header {
@@ -98,6 +105,9 @@ footer>p {
     }
     nav {
         float: left;
+    }
+    .grid {
+        grid-template-columns: 1fr;
     }
     /*header {*/
     /*    !*max-width: 480px;*!*/
