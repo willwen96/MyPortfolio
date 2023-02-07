@@ -80,9 +80,8 @@
 <main>
     <div class="flex_row wrapper" style="align-items: center;">
         <picture class="row_inline">
-            <source media="(max-width:1200px)" srcset="public/contact_me_small.webp">
-            <img src="public/contact_me_large.webp" alt="Contact" style="margin-right: 4vw"
-                    sizes="(min-width: 991px) 480w, (min-width: 1279) 620w">
+            <source media="(max-width:991px)" srcset="public/contact_me_small.webp">
+            <img src="public/contact_me.png" alt="Contact" style="margin-right: 7vw; width: 75%"/>
         </picture>
         <section id="contact_form">
             <form action="/form-handler" method="post" id="my_form"></form>
@@ -115,7 +114,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <textarea name="message" id="message" cols="48" rows="10" form="my_form" required></textarea>
+                        <textarea name="message" id="message" cols="48" rows="10" form="my_form" style="resize: none"></textarea>
                     </td>
                 </tr>
             </table>
