@@ -9,6 +9,34 @@
     <title>Skills | Junhui Wen</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
+    <style>
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+        }
+        .odd_row {
+            background-color: rgba(0,119,190,0.5);
+        }
+        table {
+            margin: 0 10% 2.5rem 10%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 80%;
+            text-align: center;
+
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+        table td, table th {
+            padding: 4px 4px;
+            vertical-align: middle;
+        }
+        @media (max-width: 633px) {
+            table {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -30,23 +58,23 @@
         <div class="grid">
             <section>
                 <img src="public/vue.svg" alt="vue" />
-                <p> Vue <br><br> 1 Year <br> 1 Project </p>
+                <p> Vue </p> <br> <p> 1 Year <br> 1 Project </p>
             </section>
             <section>
                 <img src="public/node.svg" alt="Node.js" />
-                <p> Node.js <br><br> 1 Year <br> 1 Project </p>
+                <p> Node.js </p> <br> <p> 1 Year <br> 1 Project </p>
             </section>
             <section>
                 <img src="public/javascript.svg" alt="Javascript" />
-                <p> JavaScript <br><br> 2 Years <br> 3 Projects </p>
+                <p> JavaScript </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
             <section>
                 <img src="public/html.svg" alt="HTML" />
-                <p> HTML <br><br> 2 Years <br> 3 Projects </p>
+                <p> HTML </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
-            <section>
+            <section class="last_row">
                 <img src="public/css.svg" alt="CSS" />
-                <p> CSS <br><br> 2 Years <br> 3 Projects </p>
+                <p> CSS </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
 <!--            <ul>-->
 <!--                <li>Vue</li>-->
@@ -61,23 +89,23 @@
         <div class="grid">
             <section>
                 <img src="public/java.svg" alt="Java" />
-                <p> Java <br><br> 5 Years <br> Projects: JDBC, Web, Android, GUI</p>
+                <p> Java </p> <br> <p> 5 Years <br> Projects: JDBC, Web, Android, GUI</p>
             </section>
             <section>
                 <img src="public/python.svg" alt="Python" />
-                <p> Python <br><br> 5 Years <br> Projects: ML, </p>
+                <p> Python </p> <br> <p> 5 Years <br> Projects: ML, </p>
             </section>
             <section>
                 <img src="public/cpp_logo.svg" alt="C/C++" />
-                <p> C/C++ <br><br> 2 Years <br> Projects: Algorithms, File Compression</p>
+                <p> C/C++ </p> <br> <p> 2 Years <br> Projects: Algorithms, File Compression</p>
             </section>
             <section>
                 <img src="public/spring.svg" alt="Spring" />
-                <p> Spring Boot <br><br> 2 Years <br> 2 Projects</p>
+                <p> Spring Boot </p> <br> <p> 2 Years <br> 2 Projects</p>
             </section>
-            <section>
+            <section class="last_row">
                 <img src="public/mysql.svg" alt="MySQL" />
-                <p> MySQL <br><br> 2 Years <br> 3 Projects </p>
+                <p> MySQL </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
 <!--            <ul>-->
 <!--                <li>Python</li>-->
@@ -92,23 +120,23 @@
         <div class="grid">
             <section>
                 <img src="public/android-studio.svg" alt="Android Studio" />
-                <p> Android Studio <br><br> 1 Year <br> 1 Project</p>
+                <p> Android Studio</p> <br> <p>1 Year <br> 1 Project</p>
             </section>
             <section>
                 <img src="public/aws.svg" alt="AWS" />
-                <p> AWS <br><br> 1 Year <br> Services: S3, Route 53</p>
+                <p> AWS </p> <br> <p> 1 Year <br> Services: S3, Route 53</p>
             </section>
             <section>
                 <img src="public/linux.svg" alt="Linux" />
-                <p> Linux <br><br> 3 Years <br> sudo rm -rf /*</p>
+                <p> Linux </p> <br> <p> 3 Years <br> sudo rm -rf /*</p>
             </section>
             <section>
                 <img src="public/github.svg" alt="Github" width="70px" height="70px" />
-                <p> Github <br><br> 3 Years <br> id: <a href="https://github.com/willwen96" style="color: #0077BE">willwen96</a></p>
+                <p> Github </p> <br> <p> 3 Years <br> ID: <a href="https://github.com/willwen96" style="color: #0077BE">willwen96</a></p>
             </section>
-            <section>
+            <section class="last_row">
                 <img src="public/zenhub.svg" alt="Zenhub" />
-                <p> Zenhub <br><br> 1 Years <br> 1 Project</p>
+                <p> Zenhub </p> <br><p> 1 Year <br> 1 Project</p>
             </section>
 <!--            <ul>-->
 <!--                <li>Android Studio</li>-->
@@ -121,36 +149,75 @@
         <hr>
         <section>
             <h2>Rubik's Cubes</h2>
+            <h3 style="text-align: center">My Records</h3>
             <table>
-                <caption>My Records</caption>
+<!--                <caption><h3>My Records</h3></caption>-->
                 <colgroup>
-                    <col span="1">
+                    <col>
+                    <col span="3">
                     <col span="2">
+                    <col span="3">
                 </colgroup>
                 <tr>
-                    <th>Event&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th>Single  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Event</th>
+                    <th><abbr title="National Rank">NR</abbr></th>
+                    <th><abbr title="Continental Rank">CR</abbr></th>
+                    <th><abbr title="World Rank">WR</abbr></th>
+                    <th>Single</th>
                     <th>Average</th>
+                    <th><abbr title="World Rank">WR</abbr></th>
+                    <th><abbr title="Continental Rank">CR</abbr></th>
+                    <th><abbr title="National Rank">NR</abbr></th>
                 </tr>
-                <tr>
-                    <td>3x3x3 Cube &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>17.54 &nbsp;</td>
-                    <td>24.32</td>
+                <tbody>
+                <tr class="odd_row">
+                    <td class="event">
+                        3x3x3 Cube
+                    </td>
+                    <td>7489</td>
+                    <td>20246</td>
+                    <td>53751</td>
+                    <td>
+                            17.54
+                    </td>
+                    <td>
+                            24.32
+                    </td>
+                    <td>67849</td>
+                    <td>25103</td>
+                    <td>9156</td>
                 </tr>
-                <tr>
-                    <td>2x2x2 Cube</td>
+                <tr class="even_row">
+                    <td>
+                        2x2x2 Cube
+                    </td>
+                    <td>5645</td>
+                    <td>16392</td>
+                    <td>52213</td>
                     <td>5.74</td>
                     <td>8.18</td>
+                    <td>53133</td>
+                    <td>16924</td>
+                    <td>5913</td>
                 </tr>
-                <tr>
-                    <td>Pyraminx</td>
+                <tr class="odd_row">
+                    <td>
+                        Pyraminx
+                    </td>
+                    <td>3939</td>
+                    <td>10890</td>
+                    <td>38490</td>
                     <td>9.96</td>
                     <td>12.05</td>
+                    <td>27573</td>
+                    <td>8033</td>
+                    <td>3044</td>
                 </tr>
+                </tbody>
             </table>
-            <div>
+            <div style="text-align-last: center">
                 <h3>My best record for 3*3*3: </h3>
-                <video src="public/cube.mp4" muted controls preload="metadata" width="400px"></video>
+                <video src="public/cube.mp4" muted controls preload="metadata" width="400px" style="max-width: 80%"></video>
             </div>
         </section>
     </div>
