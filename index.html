@@ -30,7 +30,7 @@
             font-family: work-sans;
             src: url('/public/WorkSans/WorkSans-Light.woff');
         }
-        button {
+        main button {
             background: none;
             border: 2px solid;
             font: inherit;
@@ -40,7 +40,7 @@
             transition: 0.5s;
             border-radius: 15px;
         }
-        button:hover, button:focus {
+        main button:hover, main button:focus {
             cursor: pointer;
             transform: translateY(-0.25em);
             color: #54b3d6;
@@ -104,13 +104,15 @@
 <body>
 <header>
     <code>&lt; Junhui Wen /&gt;</code>
-    <nav>
-        <picture> <img src="public/hamburger.png" alt="menu icon" /> </picture>
-        <a class="cur_nav" href="index.html">Home</a>
-        <a class="nav" href="skills.html">Skills</a>
-        <a class="nav" href="portfolio.html">Portfolio</a>
-        <a class="nav" href="contact.html">Contact Me</a>
-    </nav>
+    <div style="display: flex; flex-direction: row">
+        <button id="hamburger"> <img src="public/hamburger.png" alt="menu icon" /> </button>
+        <nav>
+            <a class="cur_nav" href="index.html">Home</a>
+            <a class="nav" href="skills.html">Skills</a>
+            <a class="nav" href="portfolio.html">Portfolio</a>
+            <a class="nav" href="contact.html">Contact Me</a>
+        </nav>
+    </div>
 </header>
 
 <main>

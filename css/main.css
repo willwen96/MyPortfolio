@@ -51,6 +51,9 @@ header {
     width: 100vw;
     z-index: 10;
 }
+#hamburger {
+    display: none;
+}
 .wrapper {
     width: 100vw;
     background-color: var(--background-color);
@@ -110,15 +113,28 @@ footer>p {
         display: none;
     }
     nav {
-        display: flex;
+        display: none;
         margin-top: 0.5rem;
         margin-left: 0.5rem;
     }
-    nav > picture {
-        visibility: visible;
+    nav a {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 4px;
+
+        padding: 0.25rem .25rem;
+
     }
-    nav > * + * {
-        /*visibility: hidden;*/
+    #hamburger {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #hamburger:focus + nav {
+        display: flex !important;
     }
     /*header {*/
     /*    !*max-width: 480px;*!*/
