@@ -44,7 +44,7 @@
             border-radius: 5px;
             color: white;
         }
-        button {
+        main button {
             color: #0077BE;
             background: none;
             border: 1px solid;
@@ -55,7 +55,7 @@
             transition: 0.1s;
             border-radius: 15px;
         }
-        button:hover, button:focus {
+        main button:hover, button:focus {
             color: #fff;
             background: #0077BE;
         }
@@ -65,20 +65,22 @@
         /*img:hover, img:focus {*/
         /*    transform: translateY(1.5em);*/
         /*}*/
-        main img {
-            animation: move-up-and-down 3s linear infinite;
-            transform-origin: center bottom;
-        }
+        @media (min-width: 992px) {
+            main img {
+                animation: move-up-and-down 3s linear infinite;
+                transform-origin: center bottom;
+            }
 
-        @keyframes move-up-and-down {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(1.5em);
-            }
-            100% {
-                transform: translateY(0);
+            @keyframes move-up-and-down {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(1.5em);
+                }
+                100% {
+                    transform: translateY(0);
+                }
             }
         }
     </style>
@@ -86,13 +88,15 @@
 <body>
 <header>
     <code>&lt; Junhui Wen /&gt;</code>
-    <nav>
-        <picture> <img src="public/hamburger.png" alt="menu icon" /> </picture>
-        <a class="nav" href="index.html">Home</a>
-        <a class="nav" href="skills.html">Skills</a>
-        <a class="nav" href="portfolio.html">Portfolio</a>
-        <a class="cur_nav" href="contact.html">Contact Me</a>
-    </nav>
+    <div style="display: flex; flex-direction: row">
+        <button id="hamburger"> <img src="public/hamburger.png" alt="menu icon" /> </button>
+        <nav>
+            <a class="cur_nav" href="index.html">Home</a>
+            <a class="nav" href="skills.html">Skills</a>
+            <a class="nav" href="portfolio.html">Portfolio</a>
+            <a class="nav" href="contact.html">Contact Me</a>
+        </nav>
+    </div>
 </header>
 
 <main>
