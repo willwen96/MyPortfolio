@@ -11,6 +11,8 @@
     <link href="css/main.css" rel="stylesheet" />
     <style>
         #contact_form {
+            width: 80%;
+            margin-left: 10%;
             background: white;
             box-shadow: 0 20px 30px rgba(123, 83, 195, 0.15);
             padding: 2% 4% 2% 2%;
@@ -29,7 +31,7 @@
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            font-family: Times,serif;
+            font-family: Times, serif;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid gray;
@@ -43,6 +45,15 @@
             border: none;
             border-radius: 5px;
             color: white;
+        }
+        .grid {
+            margin-top: 36px;
+            padding: 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            align-content: center;
+            width: 100%;
         }
         main button {
             color: #0077BE;
@@ -59,12 +70,11 @@
             color: #fff;
             background: #0077BE;
         }
-        /*img {*/
-        /*    transition: 2s;*/
-        /*}*/
-        /*img:hover, img:focus {*/
-        /*    transform: translateY(1.5em);*/
-        /*}*/
+        picture {
+            width: 75%;
+            max-width: 486px;
+            margin: auto;
+        }
         @media (min-width: 992px) {
             main img {
                 animation: move-up-and-down 3s linear infinite;
@@ -81,6 +91,20 @@
                 100% {
                     transform: translateY(0);
                 }
+            }
+        }
+
+        @media (max-width: 991px) {
+            .grid {
+                grid-template-columns: 1fr;
+                padding-top: 8%;
+            }
+            #contact_form {
+                width: 95%;
+                margin: 0;
+            }
+            textarea {
+                width: 95%;
             }
         }
     </style>
@@ -100,10 +124,10 @@
 </header>
 
 <main>
-    <div class="flex_row wrapper" style="align-items: center;">
+    <div class="wrapper grid">
         <picture class="row_inline">
-            <source media="(max-width:991px)" srcset="public/contact_me_small.webp">
-            <img src="public/contact_me.png" alt="Contact" style="margin-right: 7vw; width: 75%"/>
+            <source media="(max-width:991px)" srcset="public/contact_me_small2.png" sizes="300px">
+            <img src="public/contact_me.png" alt="Contact" style="width: 100%"/>
         </picture>
         <section id="contact_form">
             <form action="form-handler.php" method="post" id="my_form"></form>

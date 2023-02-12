@@ -15,8 +15,7 @@
         #img1 {
             position: relative;
             display: inline-block;
-            margin-right: 8%;
-            margin-top: 4%;
+            margin: auto;
         }
         #title {
             padding-left: 7%;
@@ -29,6 +28,11 @@
         @font-face {
             font-family: work-sans;
             src: url('/public/WorkSans/WorkSans-Light.woff');
+        }
+        main {
+            overflow-x: hidden;
+            min-height: 100%;
+            height: auto;
         }
         main button {
             background: none;
@@ -50,7 +54,7 @@
             line-height: 125%;
             font-family: work-sans, Times, serif;
             color: #636363;
-            margin-left: 7%;
+            padding-left: 7%;
             font-weight: 500;
             width: 60ch;
             display: flex;
@@ -61,20 +65,6 @@
         /*nav > a {*/
         /*    visibility: visible;*/
         /*}*/
-        @media (min-width: 1440px) {
-            header {
-                width: 1440px;
-                margin-left: calc((100vw - 1440px)/2);
-            }
-            .wrapper {
-                width: 1440px;
-                margin-left: calc((100vw - 1440px)/2);
-            }
-            footer {
-                width: 1440px;
-                margin-left: calc((100vw - 1440px)/2);
-            }
-        }
 
         @media (min-width: 992px) and (max-width: 1279px) {
             #main_page {
@@ -82,6 +72,7 @@
             }
             #intro {
                 width: 50ch;
+                max-width: 90%;
             }
             #img1 {
                 width: 450px;
@@ -96,6 +87,9 @@
             #img1 {
                 width: 300px;
                 height: 186px;
+            }
+            #main_page {
+                padding-top: 10%;
             }
         }
 
@@ -117,7 +111,7 @@
 
 <main>
     <div id="main_page" class="flex_row wrapper">
-        <img id="img1" src="public/my_photo.png" alt="My Photo" width="500" height="324"/>
+        <img id="img1" src="public/my_photo.jpg" alt="My Photo" width="500" height="324"/>
         <aside>
             <h1 id="title">Hi 👋🏻 I am Junhui (Will) Wen </h1>
             <span id="intro">

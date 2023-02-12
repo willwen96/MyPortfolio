@@ -36,6 +36,7 @@ nav a:hover {
     box-shadow: inset 200px 0 0 0 var(--theme-color);
 }
 body {
+    height: 100vh;
     margin: 0;
 }
 header {
@@ -82,10 +83,12 @@ a {
     color: black;
  }
 h1 {
-    margin-bottom: 2em;
+    margin: 1em 0;
 }
 footer>p {
+    margin-top: 0;
     margin-left: 5vw;
+    padding: 1.5rem 0;
 }
 
 @media (min-width: 1440px) {
@@ -93,14 +96,15 @@ footer>p {
         width: 1440px;
         margin-left: calc((100vw - 1440px)/2);
     }
-    .wrapper {
-        width: 1440px;
-        margin-left: calc((100vw - 1440px)/2);
-    }
     footer {
         width: 1440px;
         margin-left: calc((100vw - 1440px)/2);
     }
+    main {
+        width: 1440px;
+        margin-left: calc((100vw - 1440px)/2);
+    }
+
 }
 @media (max-width: 991px) {
     .flex_row {
