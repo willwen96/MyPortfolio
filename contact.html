@@ -75,6 +75,9 @@
             max-width: 486px;
             margin: auto;
         }
+        textarea {
+            width: 95%;
+        }
         @media (min-width: 992px) {
             main img {
                 animation: move-up-and-down 3s linear infinite;
@@ -99,12 +102,12 @@
                 grid-template-columns: 1fr;
                 padding-top: 8%;
             }
+            table {
+                margin: auto;
+            }
             #contact_form {
                 width: 95%;
                 margin: 0;
-            }
-            textarea {
-                width: 95%;
             }
         }
     </style>
@@ -163,8 +166,12 @@
                         <textarea name="message" id="message" cols="48" rows="10" form="my_form" style="resize: none"></textarea>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <button type="submit" form="my_form"> SEND </button>
+                    </td>
+                </tr>
             </table>
-            <button type="submit" form="my_form"> SEND </button>
         </section>
 
     </div>
