@@ -79,7 +79,20 @@
                 height: 286px;
             }
         }
-        @media (max-width: 991px) {
+        @media (min-width: 768px) and (max-width: 991px) {
+            #intro {
+                width: 35ch;
+                max-width: 75vw;
+            }
+            #img1 {
+                width: 260px;
+                height: 186px;
+            }
+            #main_page {
+                padding-top: 10%;
+            }
+        }
+        @media (max-width: 767px) {
             #intro {
                 width: 50ch;
                 max-width: 80vw;
@@ -90,6 +103,9 @@
             }
             #main_page {
                 padding-top: 10%;
+            }
+            main button {
+                padding: 1em 1.5em;
             }
         }
 
