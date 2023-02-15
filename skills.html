@@ -58,7 +58,11 @@
 <header>
     <code>&lt; Junhui Wen /&gt;</code>
     <div style="display: flex; flex-direction: row">
-        <button id="hamburger"> <img src="public/hamburger.png" alt="menu icon" /> </button>
+        <div id="toggle">
+            <button id="hamburger"> <img src="public/hamburger.png" alt="open menu icon" /> </button>
+            <button id="X"> <img src="public/X.png" alt="close menu icon" /> </button>
+        </div>
+
         <nav>
             <a class="nav" href="index.html">Home</a>
             <a class="cur_nav" href="skills.html">Skills</a>
@@ -67,8 +71,15 @@
         </nav>
     </div>
 </header>
+
 <main>
-    <div class="wrapper">
+    <nav id="mobile_menu">
+        <a class="nav" href="index.html">Home</a>
+        <a class="cur_nav" href="skills.html">Skills</a>
+        <a class="nav" href="portfolio.html">Portfolio</a>
+        <a class="nav" href="contact.html">Contact</a>
+    </nav>
+    <div id="main_page" class="wrapper">
         <h1>My Skills</h1>
         <h2>Front-End</h2>
         <div class="grid">
@@ -241,5 +252,7 @@
 <footer>
     <p>@2023 by Junhui Wen</p>
 </footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

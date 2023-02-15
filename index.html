@@ -49,6 +49,9 @@
             transform: translateY(-0.25em);
             color: #54b3d6;
         }
+        #home_button {
+            flex-direction: row;
+        }
         #intro {
             font-size: 17px;
             line-height: 125%;
@@ -100,6 +103,7 @@
             #img1 {
                 width: 260px;
                 height: 186px;
+                margin: 15% auto;
             }
             #main_page {
                 padding-top: 10%;
@@ -109,13 +113,18 @@
             }
         }
 
+
     </style>
 </head>
 <body>
 <header>
     <code>&lt; Junhui Wen /&gt;</code>
     <div style="display: flex; flex-direction: row">
-        <button id="hamburger"> <img src="public/hamburger.png" alt="menu icon" /> </button>
+        <div id="toggle">
+            <button id="hamburger"> <img src="public/hamburger.png" alt="open menu icon" /> </button>
+            <button id="X"> <img src="public/X.png" alt="close menu icon" /> </button>
+        </div>
+
         <nav>
             <a class="cur_nav" href="index.html">Home</a>
             <a class="nav" href="skills.html">Skills</a>
@@ -126,6 +135,12 @@
 </header>
 
 <main>
+    <nav id="mobile_menu">
+        <a class="cur_nav" href="index.html">Home</a>
+        <a class="nav" href="skills.html">Skills</a>
+        <a class="nav" href="portfolio.html">Portfolio</a>
+        <a class="nav" href="contact.html">Contact</a>
+    </nav>
     <div id="main_page" class="flex_row wrapper">
         <img id="img1" src="public/my_photo.png" alt="My Photo" width="400" height="324"/>
         <aside style="margin: auto;">
@@ -170,7 +185,6 @@
         <source src="public/again.mp3" type="audio/MP3">
     </audio>
 </main>
-
 <footer>
     <p>@2023 by Junhui Wen</p>
     <script>
@@ -182,6 +196,8 @@
         }, false);
     </script>
 </footer>
+
+<script src="js/main.js"></script>
 </body>
 
 </html>

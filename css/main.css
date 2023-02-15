@@ -5,13 +5,9 @@
 }
 
 code {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     margin-left: 1em;
-}
-nav {
-    font-size: 17px;
-    /*margin-top: -0.5rem;*/
 }
 nav > picture{
     visibility: hidden;
@@ -22,7 +18,7 @@ nav > picture{
 }
 nav a {
     font-family: 'Roboto', Times, serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     margin: 0 7px;
 
@@ -52,8 +48,29 @@ header {
     width: 100vw;
     z-index: 10;
 }
-#hamburger {
+#mobile_menu {
     display: none;
+}
+#toggle {
+    display: none;
+}
+#hamburger {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+#X {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
 }
 .wrapper {
     width: 100vw;
@@ -64,6 +81,7 @@ header {
 }
 main {
     display: flex;
+    min-height: 100%;
     padding-bottom: 0;
     border-bottom: 1px solid #ccc;
 }
@@ -106,55 +124,55 @@ footer>p {
     }
 
 }
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-@media (max-width: 767px) {
-    .flex_row {
-        flex-direction: column;
-    }
-    #home_button {
-        flex-direction: row;
-    }
-    code {
-        display: none;
-    }
+@media (max-width: 991px) {
     nav {
-        /*display: none;*/
-        margin-top: 0.5rem;
         margin-left: 0.5rem;
     }
+    code {
+        font-size: 16px;
+    }
     nav a {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         margin: 0 4px;
 
         padding: 0.25rem .25rem;
 
     }
-    #hamburger {
-        border: none;
-        background-color: transparent;
-        display: flex;
-        padding: 10px;
-        cursor: pointer;
+}
+@media (max-width: 767px) {
+    .flex_row {
+        flex-direction: column;
     }
-
-    #hamburger:focus + nav {
-        display: flex !important;
+}
+@media (max-width: 480px) {
+    code {
+        display: none;
     }
-    /*header {*/
-    /*    !*max-width: 480px;*!*/
-    /*    margin: auto;*/
-    /*    !*background-color: #555;*!*/
-    /*    !*height: 500px;*!*/
-    /*    color: white;*/
-    /*    border-radius: 10px;*/
-    /*}*/
-    /*nav {*/
-    /*    overflow: hidden;*/
-    /*    !*background-color: #333;*!*/
-    /*    position: relative;*/
-    /*}*/
+    #toggle {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+    #mobile_menu {
+        grid-template-columns: 1fr;
+        padding: 10% 5%;
+        width: 100vw;
+        height: fit-content;
+        margin: auto;
+        overflow: hidden;
+        align-items: center;
+        text-align: center;
+    }
+    main nav a {
+        font-size: 2rem;
+        width: 40vw;
+        margin: 1rem auto;
+        padding: 0.75rem 0;
+    }
+    .cur_nav {
+        box-shadow: inset 40vw 0 0 0 var(--theme-color);
+    }
 }
 
