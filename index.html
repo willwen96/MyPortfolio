@@ -62,7 +62,7 @@
             width: 60ch;
             display: flex;
         }
-        #main_page {
+        #home {
             padding-top: 17vh;
         }
         /*nav > a {*/
@@ -70,7 +70,7 @@
         /*}*/
 
         @media (min-width: 992px) and (max-width: 1279px) {
-            #main_page {
+            #home {
                 padding-top: 15vh;
             }
             #intro {
@@ -91,7 +91,7 @@
                 width: 260px;
                 height: 186px;
             }
-            #main_page {
+            #home {
                 padding-top: 10%;
             }
         }
@@ -105,7 +105,7 @@
                 height: 186px;
                 margin: 15% auto;
             }
-            #main_page {
+            #home {
                 padding-top: 10%;
             }
             main button {
@@ -121,8 +121,11 @@
     <code>&lt; Junhui Wen /&gt;</code>
     <div style="display: flex; flex-direction: row">
         <div id="toggle">
-            <button id="hamburger"> <img src="public/hamburger.png" alt="open menu icon" /> </button>
-            <button id="X"> <img src="public/X.png" alt="close menu icon" /> </button>
+            <section id="icon" style="position: relative; float: right; height: 19px; width: 24px">
+                <span id="top-line"></span>
+                <span id="mid-line"></span>
+                <span id="bot-line"></span>
+            </section>
         </div>
 
         <nav>
@@ -141,7 +144,7 @@
         <a class="nav" href="portfolio.html">Portfolio</a>
         <a class="nav" href="contact.html">Contact</a>
     </nav>
-    <div id="main_page" class="flex_row wrapper">
+    <div id="home" class="flex_row wrapper">
         <img id="img1" src="public/my_photo.png" alt="My Photo" width="400" height="324"/>
         <aside style="margin: auto;">
             <h1 id="title">Hi 👋🏻 I am Junhui (Will) Wen </h1>
@@ -197,7 +200,7 @@
     </script>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/home.js"></script>
 </body>
 
 </html>

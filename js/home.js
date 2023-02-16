@@ -4,7 +4,7 @@ function initMobileMenu() {
     const menu = document.getElementById('mobile_menu');
     const header = document.querySelector('header');
     const bg = document.querySelector('body');
-    let content = document.getElementById('main_page');
+    let content = document.getElementById('home');
 
     let icon = document.getElementById('icon');
     let top_line = document.getElementById('top-line');
@@ -51,7 +51,7 @@ function initMobileMenu() {
             bg.style.backgroundColor = 'var(--background-color)';
             bg.style.overflow = 'auto';
             header.style.background = 'white';
-            content.style.display = 'block';
+            content.style.display = 'flex';
         }
         count++;
     });

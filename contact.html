@@ -14,7 +14,7 @@
             width: 80%;
             margin-left: 10%;
             background: white;
-            box-shadow: 0 20px 30px rgba(123, 83, 195, 0.15);
+            box-shadow: 0 10px 20px rgba(123, 83, 195, 0.15);
             padding: 2% 4% 2% 2%;
         }
         tr {
@@ -98,16 +98,29 @@
         }
 
         @media (max-width: 991px) {
-            .grid {
-                grid-template-columns: 1fr;
-                padding-top: 8%;
-            }
             table {
                 margin: auto;
             }
             #contact_form {
                 width: 95%;
                 margin: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .grid {
+                grid-template-columns: 1fr;
+                padding-top: 8%;
+            }
+        }
+        @media (max-width: 480px) {
+            img {
+                display: none;
+            }
+            #main_page {
+                display: block;
+                height: min-content;
+                margin: auto !important;
             }
         }
     </style>
@@ -117,8 +130,11 @@
     <code>&lt; Junhui Wen /&gt;</code>
     <div style="display: flex; flex-direction: row">
         <div id="toggle">
-            <button id="hamburger"> <img src="public/hamburger.png" alt="open menu icon" /> </button>
-            <button id="X"> <img src="public/X.png" alt="close menu icon" /> </button>
+            <section id="icon" style="position: relative; float: right; height: 19px; width: 24px">
+                <span id="top-line"></span>
+                <span id="mid-line"></span>
+                <span id="bot-line"></span>
+            </section>
         </div>
 
         <nav>

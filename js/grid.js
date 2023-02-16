@@ -51,7 +51,7 @@ function initMobileMenu() {
             bg.style.backgroundColor = 'var(--background-color)';
             bg.style.overflow = 'auto';
             header.style.background = 'white';
-            content.style.display = 'block';
+            content.style.display = 'grid';
         }
         count++;
     });

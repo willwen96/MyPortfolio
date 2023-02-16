@@ -9,6 +9,22 @@
     <title>? | Junhui Wen</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
+    <style>
+
+        /*#icon:hover #top-line {*/
+        /*    top: 24px;*/
+        /*    left: 22px;*/
+        /*    transform: rotate(45deg);*/
+        /*}*/
+        /*#icon:hover #mid-line {*/
+        /*    transform: rotate(-45deg);*/
+        /*}*/
+        /*#icon:hover #bot-line {*/
+        /*    top: 32px;*/
+        /*    left: 30px;*/
+        /*    transform: rotate(45deg);*/
+        /*}*/
+    </style>
 </head>
 <body>
 <header>
@@ -27,6 +43,11 @@
 <main>
     <div class="wrapper">
         <h1>Site for random elements!</h1>
+        <section id="icon" style="position: relative; padding: 20px; height: 19px; width: 24px">
+            <span id="top-line"></span>
+            <span id="mid-line"></span>
+            <span id="bot-line"></span>
+        </section>
         <section>
             <form action="/fb-handler">
                 <fieldset>
@@ -174,6 +195,40 @@
     ctx.beginPath();
     ctx.arc(200, 150, 100, 0, 2 * Math.PI);
     ctx.stroke();
+
+    let icon = document.getElementById('icon');
+    let top_line = document.getElementById('top-line');
+    let mid_line = document.getElementById('mid-line');
+    let bot_line = document.getElementById('bot-line');
+
+    let count = 0;
+
+    icon.addEventListener('click', () => {
+        if (count%2 == 0) {
+            top_line.style.top = '24px';
+            top_line.style.left = '22px';
+            top_line.style.transform = 'rotate(45deg)';
+
+            mid_line.style.transform = 'rotate(-45deg)';
+
+            bot_line.style.top = '32px';
+            bot_line.style.left = '30px';
+            bot_line.style.transform = 'rotate(45deg)';
+        } else {
+            top_line.style.top = '20px';
+            top_line.style.left = '20px';
+            top_line.style.transform = 'rotate(-0)';
+
+            mid_line.style.transform = 'rotate(0)';
+
+            bot_line.style.top = '36px';
+            bot_line.style.left = '32px';
+            bot_line.style.transform = 'rotate(0)';
+        }
+        count++;
+    });
+
+
 </script>
 </body>
 </html>
