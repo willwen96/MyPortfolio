@@ -149,8 +149,9 @@ footer>p {
     /*code {*/
     /*    display: none;*/
     /*}*/
-    .wrapper {
-        margin-top: 0 !important;
+    .grid section {
+        padding: 2rem;
+        margin: 0;
     }
     #toggle {
         display: block;
@@ -158,7 +159,7 @@ footer>p {
         padding-right: 10%;
     }
     header {
-        position: relative;
+        position: fixed;
     }
     header nav {
         position: relative;
