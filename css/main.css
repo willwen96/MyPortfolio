@@ -149,6 +149,9 @@ footer>p {
     /*code {*/
     /*    display: none;*/
     /*}*/
+    main {
+        min-height: 100vh;
+    }
     .grid section {
         padding: 2rem;
         margin: 0;
