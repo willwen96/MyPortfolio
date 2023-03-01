@@ -77,3 +77,7 @@ function initMobileMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', initMobileMenu);
+
+
+
+search.start();

@@ -5,12 +5,29 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Junhui Wen" />
-    <meta name="web_url" content="https://unrivaled-genie-9ac485.netlify.app/" />
+    <meta name="web_url" content="https://lovely-gingersnap-33870e.netlify.app/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Junhui Wen's Portfolio</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-258697632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-258697632-1');
+    </script>
+
+    <script src="./js/fastclick.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
+    </script>
+
     <style>
         #img1 {
             position: relative;
@@ -129,6 +146,7 @@
         </div>
 
         <nav>
+            <a class="nav" href="nativedialogs.html" style="margin-right: 20px">Link to HW4</a>
             <a class="cur_nav" href="index.html">Home</a>
             <a class="nav" href="skills.html">Skills</a>
             <a class="nav" href="portfolio.html">Portfolio</a>
@@ -143,9 +161,10 @@
         <a class="nav" href="skills.html">Skills</a>
         <a class="nav" href="portfolio.html">Portfolio</a>
         <a class="nav" href="contact.html">Contact</a>
+        <a class="nav" href="nativedialogs.html">Link to HW4</a>
     </nav>
     <div id="home" class="flex_row wrapper">
-        <img id="img1" src="public/my_photo.png" alt="My Photo" width="400" height="324"/>
+        <img id="img1" src="public/my_photo.png" alt="A photo of me drinking water" width="400" height="324"/>
         <aside style="margin: auto;">
             <h1 id="title">Hi 👋🏻 I am Junhui (Will) Wen </h1>
             <span id="intro">
@@ -160,16 +179,16 @@
         efficiency.</span>
             <div id="icons">
                 <a href="https://www.linkedin.com/in/junhui-wen-73141421a/">
-                    <img src="public/linkedin.svg" alt="Linkedin" />
+                    <img src="public/linkedin.svg" alt="Link to my LinkedIn page" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://github.com/willwen96">
-                    <img src="public/github.svg" alt="Github" />
+                    <img src="public/github.svg" alt="Link to my github page" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://www.facebook.com/will.wen.313">
-                    <img src="public/facebook.svg" alt="Facebook" />
+                    <img src="public/facebook.svg" alt="Link to my Facebook page" />
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="lab.html">
-                    <img src="public/Q_mark.svg" alt="What is this?" />
+                    <img src="public/Q_mark.svg" alt="Icon to cse134 hw section" />
                 </a>
             </div>
             <div id="home_button" class="flex_row" style="margin-top: 2em;">
