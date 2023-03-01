@@ -9,6 +9,26 @@
     <title>Skills | Junhui Wen</title>
     <link href="public/favicon.ico" rel="icon" />
     <link href="css/main.css" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-258697632-1"></script>
+    <script src="./js/fastclick.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-258697632-1');
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
     <style>
         .grid {
             display: grid;
@@ -96,23 +116,23 @@
         <h2>Front-End</h2>
         <div class="grid">
             <section>
-                <img src="public/vue.svg" alt="vue" />
+                <img src="public/vue.svg" alt="vue icon" />
                 <p> Vue </p> <br> <p> 1 Year <br> 1 Project </p>
             </section>
             <section>
-                <img src="public/node.svg" alt="Node.js" />
+                <img src="public/node.svg" alt="Node.js icon" />
                 <p> Node.js </p> <br> <p> 1 Year <br> 1 Project </p>
             </section>
             <section>
-                <img src="public/javascript.svg" alt="Javascript" />
+                <img src="public/javascript.svg" alt="Javascript icon" />
                 <p> JavaScript </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
             <section>
-                <img src="public/html.svg" alt="HTML" />
+                <img src="public/html.svg" alt="HTML icon" />
                 <p> HTML </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
             <section class="last_row">
-                <img src="public/css.svg" alt="CSS" />
+                <img src="public/css.svg" alt="CSS icon" />
                 <p> CSS </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
 <!--            <ul>-->
@@ -127,23 +147,23 @@
         <h2>Back-End</h2>
         <div class="grid">
             <section>
-                <img src="public/java.svg" alt="Java" />
+                <img src="public/java.svg" alt="Java icon" />
                 <p> Java </p> <br> <p> 5 Years <br> Projects: JDBC, Web, Android, GUI</p>
             </section>
             <section>
-                <img src="public/python.svg" alt="Python" />
+                <img src="public/python.svg" alt="Python icon" />
                 <p> Python </p> <br> <p> 5 Years <br> Projects: ML, Numpy, Pandas</p>
             </section>
             <section>
-                <img src="public/cpp_logo.svg" alt="C/C++" />
+                <img src="public/cpp_logo.svg" alt="C/C++ icon" />
                 <p> C/C++ </p> <br> <p> 2 Years <br> Projects: Algorithms, File Compression</p>
             </section>
             <section>
-                <img src="public/spring.svg" alt="Spring" />
+                <img src="public/spring.svg" alt="Spring icon" />
                 <p> Spring Boot </p> <br> <p> 2 Years <br> 2 Projects</p>
             </section>
             <section class="last_row">
-                <img src="public/mysql.svg" alt="MySQL" />
+                <img src="public/mysql.svg" alt="MySQL icon" />
                 <p> MySQL </p> <br> <p> 2 Years <br> 3 Projects </p>
             </section>
 <!--            <ul>-->
@@ -158,23 +178,23 @@
         <h2>Technologies</h2>
         <div class="grid">
             <section>
-                <img src="public/android-studio.svg" alt="Android Studio" />
+                <img src="public/android-studio.svg" alt="Android Studio icon" loading="lazy"/>
                 <p> Android Studio</p> <br> <p>1 Year <br> 1 Project</p>
             </section>
             <section>
-                <img src="public/aws.svg" alt="AWS" />
+                <img src="public/aws.svg" alt="AWS icon" loading="lazy"/>
                 <p> AWS </p> <br> <p> 1 Year <br> Services: S3, Route 53</p>
             </section>
             <section>
-                <img src="public/linux.svg" alt="Linux" />
+                <img src="public/linux.svg" alt="Linux icon" loading="lazy"/>
                 <p> Linux </p> <br> <p> 3 Years <br> sudo rm -rf /*</p>
             </section>
             <section>
-                <img src="public/github.svg" alt="Github" width="70px" height="70px" />
+                <img src="public/github.svg" alt="Github icon" width="70px" height="70px" loading="lazy"/>
                 <p> Github </p> <br> <p> 3 Years <br> ID: <a href="https://github.com/willwen96" style="color: #0077BE">willwen96</a></p>
             </section>
             <section class="last_row">
-                <img src="public/zenhub.svg" alt="Zenhub" />
+                <img src="public/zenhub.svg" alt="Zenhub icon" loading="lazy"/>
                 <p> Zenhub </p> <br><p> 1 Year <br> 1 Project</p>
             </section>
 <!--            <ul>-->
@@ -266,5 +286,17 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        ScrollReveal().reveal('main section', {
+            delay: 150,
+            distance: '200px',
+            duration: 500,
+            easing: 'ease-out',
+            origin: 'bottom',
+            reset: true
+        });
+    }
+</script>
 </body>
 </html>

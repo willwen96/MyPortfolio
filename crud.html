@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Junhui Wen" />
+    <meta name="web_url" content="https://unrivaled-genie-9ac485.netlify.app/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link href="public/favicon.ico" rel="icon" />
+    <style>
+        body {
+            padding: 5%;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 15px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        label {
+            font-size: 18px;
+        }
+        input, textarea {
+            margin-bottom: 5%;
+        }
+        nav {
+            color: #0077BE;
+            text-decoration: underline;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        a:visited {
+            color: #0077BE;
+        }
+    </style>
+    <script type="text/javascript" src="js/purify.js"></script>
+    <script type="module" >
+        import { add } from "./js/addPost.js";
+        document.addEventListener('DOMContentLoaded', () => {
+            let prompt = document.getElementById("add-button");
+            prompt.addEventListener('click', add);
+        });
+    </script>
+</head>
+<header>
+    <nav style="display: flex; flex-direction: row; justify-content: space-around">
+        <a href="nativedialogs.html">Part 1</a>
+        <a href="customdialogs.html">Part 2</a>
+        <a href="crud.html">Part 3</a>
+        <a href="styledcrud.html">Part 4</a>
+    </nav>
+</header>
+    <h1>Junhui Wen's Blog</h1>
+    <ul id="blog-list">
+
+    </ul>
+    <button id="add-button">New Blog</button>
+    <dialog id="alert-dialog" style="z-index: 20">
+        <form>
+            <h4>Must fill all entries!</h4>
+            <button id="alert-ok" style="float: right">OK</button>
+        </form>
+    </dialog>
+    <dialog id="confirm-dialog">
+    </dialog>
+
+    <dialog id="prompt-dialog">
+        <form id="blog-form"></form>
+        <table>
+            <tr>
+                <td>
+                    <label for="title" form="blog_form">Title</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="title" name="title" form="blog_form" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="date" form="blog_form">Date</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date" id="date" name="date" form="blog_form" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="summary" form="blog_form">Summary</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="summary" name="summary" placeholder="Write a brief summary" rows="4" cols="30" form="blog_form" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="cancel" form="blog_form">Cancel</button>
+                </td>
+                <td>
+                    <button id="add" form="blog_form">Add</button>
+                </td>
+            </tr>
+        </table>
+    </dialog>
+
+    <dialog id="edit-dialog">
+    </dialog>
+
+    <script type="text/javascript" src="./js/blog.js"></script>
+</body>
+
+</html>
