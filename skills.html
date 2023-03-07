@@ -288,11 +288,12 @@
     if (window.matchMedia("(max-width: 767px)").matches) {
         ScrollReveal().reveal('main section', {
             delay: 150,
-            distance: '200px',
-            duration: 500,
+            distance: '50px',
+            duration: 300,
             easing: 'ease-out',
             origin: 'bottom',
-            reset: true
+            viewFactor: 0.1,
+            reset: false
         });
     }
 </script>
