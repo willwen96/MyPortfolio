@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Method Test</title>
+    <style>
+        body {
+            padding: 5%
+        }
+        button {
+            padding: 5px 10px;
+            margin: 0 10px;
+        }
+
+    </style>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#"> Part 1 </a></li>
+            <li><a href="webcomponent.html"> Part 2 </a></li>
+
+        </ul>
+    </nav>
+</header>
+<body>
+<form id="article-form"></form>
+<table>
+    <tr>
+        <td>
+            <label for="id" form="article-form">ID:</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="id" name="id" form="article-form" required> <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="article_name" form="article-form">Article Name:</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="article_name" name="article_name" form="article-form" required> <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="article_body" form="article-form">Article Body:</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="article_body" name="article_body" cols="50" rows="10" form="article-form" required></textarea> <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="date" form="article-form">Date:</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="date" name="date" readonly form="article-form" style="width: 400px"> <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" name="method" id="XHR" value="XHR" checked>
+            <label for="XHR">XHR</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" name="method" id="fetch" value="fetch">
+            <label for="fetch">fetch API</label>
+        </td>
+    </tr>
+</table>
+
+<div style="margin: 30px 0;">
+    <button type="button" id="post" form="article-form">post</button>
+    <button type="button" id="get" form="article-form">get</button>
+    <button type="button" id="put" form="article-form">put</button>
+    <button type="button" id="delete" form="article-form">delete</button>
+</div>
+
+<strong>Response:</strong>
+<output id="response">
+
+
+</output>
+
+<script>
+    let output = document.getElementById("response");
+    let id = document.getElementById("id");
+    let name = document.getElementById("article_name");
+    let body = document.getElementById("article_body");
+    let date = document.getElementById("date");
+    date.value = new Date();
+
+    document.getElementById("post").addEventListener("click", function(){
+        let data = {
+            id: id.value,
+            article_name: name.value,
+            article_body: body.value,
+            date: date.value
+        };
+        if (document.getElementById("XHR").checked) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://httpbin.org/post");
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.send(JSON.stringify(data));
+            xhr.onload = function(){
+                if (xhr.status === 200) {
+                    let response = JSON.parse(xhr.responseText);
+                    output.innerHTML = "<pre>" + JSON.stringify(response, null, 2) + "</pre>";
+                } else {
+                    alert(`Error ${xhr.status}: ${xhr.statusText}`)
+                }
+            };
+        } else {
+            fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    output.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+
+    document.getElementById("get").addEventListener("click", function(){
+        let data = {
+            id: id.value,
+            article_name: name.value,
+            article_body: body.value,
+            date: date.value
+        };
+        let l = [];
+        for (let key in data) {
+            if (data.hasOwnProperty(key)) {
+                l.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+            }
+        }
+        let url = l.join('&');
+        // console.log(url)
+        if (document.getElementById("XHR").checked) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', `https://httpbin.org/get?${url}`, true);
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    output.innerHTML = "<pre>" + JSON.stringify(JSON.parse(this.responseText), null, 2) + "</pre>";
+                }
+            };
+        } else {
+            fetch(`https://httpbin.org/get?${url}`)
+                .then(response => response.json())
+                .then(data => {
+                    output.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+
+    document.getElementById("put").addEventListener("click", function(){
+        let data = {
+            id: id.value,
+            article_name: name.value,
+            article_body: body.value,
+            date: date.value
+        };
+        if (document.getElementById("XHR").checked) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("PUT", "https://httpbin.org/put");
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.send(JSON.stringify(data));
+            xhr.onload = function(){
+                if (xhr.status === 200) {
+                    let response = JSON.parse(xhr.responseText);
+                    output.innerHTML = "<pre>" + JSON.stringify(response, null, 2) + "</pre>";
+                } else {
+                    alert(`Error ${xhr.status}: ${xhr.statusText}`)
+                }
+            };
+        } else {
+            fetch('https://httpbin.org/put', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    output.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+
+    document.getElementById("delete").addEventListener("click", function(){
+        let data = {
+            id: id.value,
+            article_name: name.value,
+            article_body: body.value,
+            date: date.value
+        };
+        let l = [];
+        for (let key in data) {
+            if (data.hasOwnProperty(key)) {
+                l.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+            }
+        }
+        let url = l.join('&');
+        if (document.getElementById("XHR").checked) {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    output.innerHTML = "<pre>" + JSON.stringify(JSON.parse(this.responseText), null, 2) + "</pre>";
+                }
+            };
+            xhr.open('DELETE', `https://httpbin.org/delete?${url}`, true);
+            xhr.send();
+        } else {
+            fetch(`https://httpbin.org/delete?${url}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    output.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+</script>
+</body>
+</html>
