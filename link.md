@@ -1,7 +1,5 @@
-Part 1: https://lovely-gingersnap-33870e.netlify.app/nativedialogs.html
+Part 1: https://clever-truffle-6dc8f3.netlify.app/methodtest.html
 
-Part 2: https://lovely-gingersnap-33870e.netlify.app/customdialogs.html
+Part 2: https://clever-truffle-6dc8f3.netlify.app/webcomponent.html
 
-Part 3: https://lovely-gingersnap-33870e.netlify.app/crud.html
-
-Part 4: https://lovely-gingersnap-33870e.netlify.app/styledcrud.html
+Part 3: https://velvety-cascaron-54d7c4.netlify.app/extracredit
